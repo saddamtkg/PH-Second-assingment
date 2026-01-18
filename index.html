@@ -5,6 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Techwave</title>
+  <!-- Inter Font CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,25 +24,97 @@
     <section class="header-section">
       <div class="row header-row">
         <div class="h-column-1">
-          <img class="header-logo" src="/assets/TechWave.png" alt="Techwave Logo" />
+          <img class="header-logo" src="./assets/TechWave.png" alt="Techwave Logo" />
         </div>
         <div class="h-column-2">
           <nav>
             <ul class="header-nav">
-              <li><a href="">About</a></li>
+              <li><a href="#about-section">About</a></li>
               <li><a href="">Episodes</a></li>
               <li><a href="">Host</a></li>
             </ul>
           </nav>
         </div>
         <div class="h-column-3">
-          <button class="header-button">
+          <button class="header-button primary-button">
             Subscribe
           </button>
         </div>
         <div class="hamburger-btn" id="hamburgerBtn">
-          <img src="assets/hamburger-menu.png" alt="Hamburger Menu" />
+          <img src="./assets/hamburger-menu.png" alt="Hamburger Menu" />
         </div>
       </div>
     </section>
   </header>
+  <main>
+    <section class="banner-section">
+      <div class="row banner-row">
+        <div class="b-column-1">
+          <div class="b-image-container">
+            <span class="new-badge">New</span>
+            <img class="hero-circle-image" src="./assets/hero-circle.png" alt="Hero Circle" />
+            <img class="microphone-image" src="./assets/microphone.png" alt="Microphone" />
+          </div>
+        </div>
+        <div class="b-column-2">
+          <h1 class="b-title">TechWave</h1>
+          <p class="b-description">Your daily dose of tech insights, productivity hacks, and personal growth.</p>
+          <div class="b-buttons">
+            <button class="primary-button b-button-1">Listen on Spotify</button>
+            <button class="b-button-2">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-section" id="about-section">
+      <div class="row about-row">
+        <div class="about-column-1">
+          <h2 class="about-title">About the Podcast</h2>
+          <p class="about-description-1">TechWave is your go-to podcast for staying ahead in the fast-paced world of
+            technology.<br>We break down complex topics into digestible insights, explore productivity strategies that
+            actually work,<br>and share stories of personal growth from industry leaders.</p>
+          <p class="about-description-2">Join thousands of young professionals and tech enthusiasts who start their day
+            with TechWave.</p>
+        </div>
+        <div class="about-column-2">
+          <div class="about-statistics-items">
+            <div class="about-statistics-item">
+              <h3 class="about-statistics-title">150K+</h3>
+              <p class="about-statistics-description">Monthly Listeners</p>
+            </div>
+            <div class="about-statistics-item">
+              <h3 class="about-statistics-title">200+</h3>
+              <p class="about-statistics-description">Episodes Published</p>
+            </div>
+            <div class="about-statistics-item">
+              <h3 class="about-statistics-title">4.9★</h3>
+              <p class="about-statistics-description">Average Rating</p>
+            </div>
+            <div class="about-statistics-item">
+              <h3 class="about-statistics-title">50+</h3>
+              <p class="about-statistics-description">Industry Experts</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="why-choose-section">
+      <div class="row why-choose-row">
+        <div class="why-choose-column">
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="footer-section">
+      <div class="row footer-row">
+        <div class="f-column-1">
+        </div>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>
