@@ -471,43 +471,43 @@ span.episode-read-time-text {
   border-radius: 50%;
 }
 h3.host-title-2 {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 39px;
-    text-align: left;
-    text-transform: capitalize;
-    margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 16px;
 }
 p.host-description {
-    text-align: left;
-    line-height: 24px;
-    opacity: 0.6;
-    margin-bottom: 16px;
+  text-align: left;
+  line-height: 24px;
+  opacity: 0.6;
+  margin-bottom: 16px;
 }
 .host-social-links {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
 }
 a.host-social-link img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 a.host-social-link {
-    padding: 10px;
-    height: 42px;
-    width: 42px;
-    border: 1px solid rgba(83, 60, 114, 1);
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+  padding: 10px;
+  height: 42px;
+  width: 42px;
+  border: 1px solid rgba(83, 60, 114, 1);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 a.host-social-link:hover {
-    border-color: #00ff88;
-    box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+  border-color: #00ff88;
+  box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
 }
 /* host-css end  */
 /* footer css start */
@@ -518,3 +518,48 @@ a.host-social-link:hover {
   background-repeat: no-repeat;
   padding: 120px 0;
 }
+ul.podcast-items {
+  display: flex;
+  list-style: none;
+  column-gap: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+ul.podcast-items li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  transition: all 0.3s ease;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+ul.podcast-items li a:hover {
+  color: #00ff88;
+}
+span.pod-title {
+  opacity: 0.6;
+}
+.footer-row {
+  max-width: 545px;
+  text-align: center;
+}
+img.footer-logo {
+  width: 410px;
+  max-width: 100%;
+}
+.footer-column-1,
+.footer-column-2 {
+  margin-bottom: 32px;
+}
+ul.podcast-items li a img {
+  transition: all 0.3s ease;
+}
+ul.podcast-items li a:hover img {
+  filter: drop-shadow(0 0 5px #00ff88);
+}
+/* footer css end */
