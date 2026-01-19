@@ -1,13 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 button {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
 }
 
@@ -25,7 +29,10 @@ p {
 
 .primary-button {
   border-radius: 100px;
-  background: linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+  background: linear-gradient(47.64deg,
+      rgba(247, 233, 63, 1),
+      rgba(251, 9, 180, 1),
+      rgba(145, 0, 248, 1));
   padding: 12px 16px;
   border: none;
   cursor: pointer;
@@ -43,7 +50,7 @@ p {
 
 /* header css start */
 .header-section {
-  background-color: #1A0B2E;
+  background-color: #1a0b2e;
   padding: 30px 0;
 }
 
@@ -87,7 +94,7 @@ p {
 }
 
 .header-nav li a:before {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 2px;
@@ -108,6 +115,7 @@ p {
     display: none;
   }
 }
+
 /* akhane 767px use kora hoiche karon akane header ta ai screen projonto thik thake */
 @media screen and (max-width: 767px) {
 
@@ -125,20 +133,22 @@ p {
 /* header css end */
 /* banner css start */
 .banner-section {
-  background-image: url('./assets/hero-bg.png');
+  background-image: url("./assets/hero-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 110px 0;
 }
+
 span.new-badge {
   padding: 8px 16px;
-  background-color: #00FF88;
+  background-color: #00ff88;
   border-radius: 100px;
   box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
   position: absolute;
   right: 45px;
 }
+
 .banner-row {
   max-width: 560px;
 }
@@ -192,7 +202,7 @@ button.b-button-2 {
 
 button.b-button-2:hover {
   background: #00ff88;
-  color: #1A0B2E;
+  color: #1a0b2e;
   opacity: 0.8;
 }
 
@@ -203,14 +213,17 @@ button.b-button-2:hover {
   gap: 8px;
   margin-top: 24px;
 }
+
 /* banner css end */
 /* about css start */
 .about-section {
-  background-color: #1A0B2E;
+  background-color: #1a0b2e;
   padding-top: 50px;
   padding-bottom: 120px;
 }
-.about-title {
+
+.about-title,
+h2.why-choose-title {
   font-size: 48px;
   font-weight: 700;
   line-height: 58px;
@@ -219,23 +232,29 @@ button.b-button-2:hover {
   text-transform: capitalize;
   margin-bottom: 16px;
 }
-.about-description-1, .about-description-2 {
+
+.about-description-1,
+.about-description-2 {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #fff;
   opacity: 0.8;
 }
+
 .about-description-1 {
   margin-bottom: 24px;
 }
+
 .about-column-1 {
   padding-bottom: 80px;
   border-bottom: 1px solid rgb(255 255 255 / 10%);
 }
+
 .about-column-2 {
   margin-top: 80px;
 }
+
 h3.about-statistics-title {
   font-size: 48px;
   font-weight: 900;
@@ -243,19 +262,108 @@ h3.about-statistics-title {
   line-height: 58px;
   text-align: center;
 }
+
 p.about-statistics-description {
   line-height: 20px;
   opacity: 0.8;
   text-align: center;
   margin-top: 16px;
 }
+
 .about-statistics-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
+
 @media screen and (max-width: 576px) {
   .about-statistics-items {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* about css end */
+/* why choose us css start */
+.why-choose-section {
+  background: rgba(35, 14, 61, 1);
+  padding: 120px 0;
+}
+
+.card-items {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.card-item {
+  padding: 40px;
+  border-radius: 40px;
+  background: rgba(53, 17, 101, 0.4);
+  margin: auto;
+}
+
+h3.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: left;
+  margin: 16px 0;
+}
+
+p.card-description {
+  line-height: 24px;
+  text-align: left;
+  opacity: 0.8;
+}
+
+img.card-icon {
+  width: 60px;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-item:nth-child(1) {
+  margin: auto;
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.card-item:nth-child(2),
+.card-item:nth-child(3),
+.card-item:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.card-item:nth-child(5) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.card-item {
+  width: 100% ;
+  height: 100% ;
+}
+
+@media screen and (max-width: 992px) {
+  .card-items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .card-item {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-item {
+    padding: 24px !important;
   }
 }
