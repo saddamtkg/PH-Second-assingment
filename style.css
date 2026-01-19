@@ -1,18 +1,16 @@
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-button {
-  font-family: "Inter", sans-serif;
-  cursor: pointer;
 }
 
 h1,
@@ -27,14 +25,20 @@ p {
   color: #fff;
 }
 
+button {
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+/* ============================================
+   COMMON COMPONENTS
+   ============================================ */
 .primary-button {
   border-radius: 100px;
-  background: linear-gradient(
-    47.64deg,
-    rgba(247, 233, 63, 1),
-    rgba(251, 9, 180, 1),
-    rgba(145, 0, 248, 1)
-  );
+  background: linear-gradient(47.64deg,
+      rgba(247, 233, 63, 1),
+      rgba(251, 9, 180, 1),
+      rgba(145, 0, 248, 1));
   padding: 12px 16px;
   border: none;
   cursor: pointer;
@@ -50,16 +54,24 @@ p {
   opacity: 0.8;
 }
 
-/* header css start */
-.header-section {
-  background-color: #1a0b2e;
-  padding: 30px 0;
-}
-
 .row {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-section {
+  background-color: #1a0b2e;
+  padding: 30px 0;
 }
 
 .header-row {
@@ -112,19 +124,15 @@ p {
   width: 100%;
 }
 
+/* Header Media Queries */
 @media screen and (min-width: 768px) {
   div#hamburgerBtn {
     display: none;
   }
 }
 
-img.hero-circle-image {
-  width: 100%;
-  max-width: 350px;
-}
-
-/* akhane 767px use kora hoiche karon akane header ta ai screen projonto thik thake */
 @media screen and (max-width: 767px) {
+
   .h-column-2,
   .h-column-3 {
     display: none;
@@ -136,14 +144,9 @@ img.hero-circle-image {
   }
 }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* header css end */
-/* banner css start */
+/* ============================================
+   BANNER SECTION
+   ============================================ */
 .banner-section {
   background-image: url("./assets/hero-bg.png");
   background-size: cover;
@@ -152,21 +155,17 @@ header {
   padding: 110px 0;
 }
 
-span.new-badge {
-  padding: 8px 16px;
-  background-color: #00ff88;
-  border-radius: 100px;
-  box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
-  position: absolute;
-  right: 45px;
-}
-
 .banner-row {
   max-width: 560px;
 }
 
 .b-image-container {
   position: relative;
+}
+
+img.hero-circle-image {
+  width: 100%;
+  max-width: 350px;
 }
 
 img.microphone-image {
@@ -200,6 +199,15 @@ p.b-description {
   margin-top: 10px;
 }
 
+span.new-badge {
+  padding: 8px 16px;
+  background-color: #00ff88;
+  border-radius: 100px;
+  box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+  position: absolute;
+  right: 45px;
+}
+
 button.b-button-2 {
   padding: 12px 20px;
   border-radius: 100px;
@@ -226,24 +234,22 @@ button.b-button-2:hover {
   margin-top: 24px;
 }
 
-/* banner css end */
-/* about css start */
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
 .about-section {
   background-color: #1a0b2e;
   padding-top: 50px;
   padding-bottom: 120px;
 }
 
-h2.about-title,
-h2.why-choose-title,
-h2.epiosod-title,
-h3.host-title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 40px;
+.about-column-1 {
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.about-column-2 {
+  margin-top: 80px;
 }
 
 .about-description-1,
@@ -257,15 +263,6 @@ h3.host-title {
 
 .about-description-1 {
   margin-bottom: 24px;
-}
-
-.about-column-1 {
-  padding-bottom: 80px;
-  border-bottom: 1px solid rgb(255 255 255 / 10%);
-}
-
-.about-column-2 {
-  margin-top: 80px;
 }
 
 h3.about-statistics-title {
@@ -295,8 +292,28 @@ p.about-statistics-description {
   }
 }
 
-/* about css end */
-/* why choose us css start */
+/* ============================================
+   SECTION TITLES (Shared)
+   ============================================ */
+h2.about-title,
+h2.why-choose-title,
+h2.epiosod-title,
+h3.host-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2.why-choose-title {
+  margin-bottom: 40px;
+}
+
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
 .why-choose-section {
   background: rgba(35, 14, 61, 1);
   padding: 120px 0;
@@ -315,35 +332,16 @@ p.about-statistics-description {
   background: rgba(53, 17, 101, 0.4);
   margin: auto;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .card-item:hover {
   transform: translateY(-10px);
   box-shadow: 0px 3px 27px 0px rgb(85 61 117 / 46%);
-}
-
-h3.card-title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 29px;
-  text-align: left;
-  margin: 16px 0;
-}
-
-p.card-description {
-  line-height: 24px;
-  text-align: left;
-  opacity: 0.8;
-}
-
-img.card-icon {
-  width: 60px;
-}
-
-.card-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .card-item:nth-child(1) {
@@ -364,15 +362,25 @@ img.card-icon {
   grid-row: span 1;
 }
 
-.card-item {
-  width: 100%;
-  height: 100%;
+h3.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: left;
+  margin: 16px 0;
 }
 
-h2.why-choose-title {
-  margin-bottom: 40px;
+p.card-description {
+  line-height: 24px;
+  text-align: left;
+  opacity: 0.8;
 }
 
+img.card-icon {
+  width: 60px;
+}
+
+/* Why Choose Us Media Queries */
 @media screen and (max-width: 992px) {
   .card-items {
     grid-template-columns: repeat(1, 1fr);
@@ -391,19 +399,18 @@ h2.why-choose-title {
   }
 }
 
-/* why choose us css end */
-/* episode css start */
+/* ============================================
+   EPISODE SECTION
+   ============================================ */
 .episode-section {
   background-color: rgba(26, 11, 46, 1);
   padding: 120px 0;
 }
 
-.episode-title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 58px;
-  color: #fff;
-  text-align: center;
+.episode-card-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 article.episode-card-item {
@@ -416,6 +423,10 @@ article.episode-card-item {
 .episode-card-item:hover {
   transform: translateY(-10px);
   box-shadow: 0px 3px 27px 0px rgb(85 61 117 / 46%);
+}
+
+.episode-card-content {
+  padding: 24px;
 }
 
 h3.episode-card-title {
@@ -443,21 +454,14 @@ span.episode-read-time-text {
   line-height: 24px;
 }
 
-.episode-card-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.episode-card-content {
-  padding: 24px;
-}
-/* episode css end */
-/* host css start */
+/* ============================================
+   HOST SECTION
+   ============================================ */
 .host-section {
   background-color: rgba(26, 11, 46, 1);
   padding-bottom: 120px;
 }
+
 .host-column-2 {
   display: flex;
   align-items: center;
@@ -466,10 +470,12 @@ span.episode-read-time-text {
   border-radius: 40px;
   background: rgba(53, 17, 101, 0.4);
 }
+
 .host-image {
   width: 200px;
   border-radius: 50%;
 }
+
 h3.host-title-2 {
   font-size: 32px;
   font-weight: 700;
@@ -478,22 +484,21 @@ h3.host-title-2 {
   text-transform: capitalize;
   margin-bottom: 16px;
 }
+
 p.host-description {
   text-align: left;
   line-height: 24px;
   opacity: 0.6;
   margin-bottom: 16px;
 }
+
 .host-social-links {
   display: flex;
   gap: 8px;
   justify-content: flex-start;
   align-items: center;
 }
-a.host-social-link img {
-  width: 20px;
-  height: 20px;
-}
+
 a.host-social-link {
   padding: 10px;
   height: 42px;
@@ -505,12 +510,20 @@ a.host-social-link {
   align-items: center;
   transition: all 0.3s ease;
 }
+
 a.host-social-link:hover {
   border-color: #00ff88;
   box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
 }
-/* host-css end  */
-/* footer css start */
+
+a.host-social-link img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
 .footer-section {
   background-image: url("./assets/footer-bg.png");
   background-size: cover;
@@ -518,6 +531,22 @@ a.host-social-link:hover {
   background-repeat: no-repeat;
   padding: 120px 0;
 }
+
+.footer-row {
+  max-width: 545px;
+  text-align: center;
+}
+
+.footer-column-1,
+.footer-column-2 {
+  margin-bottom: 32px;
+}
+
+img.footer-logo {
+  width: 410px;
+  max-width: 100%;
+}
+
 ul.podcast-items {
   display: flex;
   list-style: none;
@@ -526,6 +555,7 @@ ul.podcast-items {
   justify-content: center;
   align-items: center;
 }
+
 ul.podcast-items li a {
   text-decoration: none;
   color: #fff;
@@ -536,30 +566,20 @@ ul.podcast-items li a {
   display: flex;
   gap: 8px;
   align-items: center;
-  transition: all 0.3s ease;
 }
+
 ul.podcast-items li a:hover {
   color: #00ff88;
 }
-span.pod-title {
-  opacity: 0.6;
-}
-.footer-row {
-  max-width: 545px;
-  text-align: center;
-}
-img.footer-logo {
-  width: 410px;
-  max-width: 100%;
-}
-.footer-column-1,
-.footer-column-2 {
-  margin-bottom: 32px;
-}
+
 ul.podcast-items li a img {
   transition: all 0.3s ease;
 }
+
 ul.podcast-items li a:hover img {
   filter: drop-shadow(0 0 5px #00ff88);
 }
-/* footer css end */
+
+span.pod-title {
+  opacity: 0.6;
+}
